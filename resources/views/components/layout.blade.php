@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.rtl.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
+    <title>مدیریت کاربران</title>
+</head>
+<body class="bg-light">
+<div class="container p-4">
+{{$slot}}
+</div>
+<script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('assets/js/jquery-3.7.1.min.js')}}"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+@font-face {
+    font-family: IranSansX;
+    src: url("../fonts/IRANSansX-Regular.woff2");
+}
+*{
+    font-family: IranSansX;
+}
+
+.bg-green{
+    background-color: #459C98;
+}
+.nav-link{
+    margin-inline: 8px;
+
+}
+
+.nav-link:hover{
+    background-color:#fcba03 !important;
+}
+
+label{
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+button:hover{
+    background-color: #459C98 !important;
+}
