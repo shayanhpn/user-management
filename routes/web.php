@@ -3,6 +3,8 @@
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\LoginAdminController;
 use App\Http\Controllers\Admin\RegisterAdminController;
+use App\Http\Controllers\User\CreateRecordController;
+use App\Http\Controllers\User\ViewRecordController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,5 +28,8 @@ Route::post('register',[RegisterAdminController::class,'registerAdmin'])->name('
 Route::get('/login',[LoginAdminController::class,'showLoginAdmin']);
 Route::post('/login',[LoginAdminController::class,'loginAdmin'])->name('login');
 
+Route::get('/create-record',[CreateRecordController::class,'showCreateRecord']);
+Route::post('/create-record',[CreateRecordController::class,'createRecord']);
 
 Route::get('/dashboard',[DashboardController::class,'showDashboard']);
+Route::get('/view/record/{id}',[ViewRecordController::class,'viewRecord']);
