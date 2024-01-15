@@ -13,5 +13,7 @@
 </div>
 <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
 <script src="{{asset('assets/js/jquery-3.7.1.min.js')}}"></script>
+<script src="https://kit.fontawesome.com/add5785b56.js" crossorigin="anonymous"></script>
+<script src="{{asset('assets/js/main.js')}}"></script>
 </body>
 </html>
