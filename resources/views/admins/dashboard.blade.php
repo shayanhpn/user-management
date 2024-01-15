@@ -1,3 +1,4 @@
+<x-navbar></x-navbar>
 <x-layout>
     <div class="row">
         <div class="col-md-4">

@@ -7,7 +7,6 @@
                 <div class="text-center">
                     <h3><span class="badge bg-secondary">ایجاد حساب کاربری</span></h3>
                 </div>
-                <hr class="text-success">
                 <label for="">نام</label>
                 <input type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name">
                     @error('first_name') <p class="text-danger">{{$message}}</p> @enderror
@@ -22,8 +21,7 @@
                     @error('password') <p class="text-danger">{{$message}}</p> @enderror
                 <label for="">تکرار رمز عبور</label>
                 <input type="password" class="form-control" name="password_confirmation">
-                    <hr class="text-success">
-                <button type="submit" class="btn btn-primary form-control">ایجاد حساب</button>
+                <button type="submit" class="btn btn-primary form-control mt-4">ایجاد حساب</button>
                 </form>
             </div>
     </div>
