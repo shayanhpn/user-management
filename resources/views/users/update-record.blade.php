@@ -1,7 +1,8 @@
 <x-navbar></x-navbar>
 <x-layout>
-    <form action="" method="POST" class="p-4 bg-white shadow-sm rounded-4">
+    <form action="{{route('record.update',$record->id)}}" method="POST" class="p-4 bg-white shadow-sm rounded-4">
         @csrf
+        @method('PUT')
         <h4>ویرایش رکورد</h4>
         <hr>
         <div class="row">

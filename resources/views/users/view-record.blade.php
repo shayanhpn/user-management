@@ -2,6 +2,7 @@
 <x-layout>
 <div class="p-4 bg-white shadow-sm rounded-4">
     <h3>مشخصات کلی</h3>
+    <hr>
     <div class="row">
         <div class="col-md-4">
             <span>نام: <b>{{$user->first_name}}</b></span>

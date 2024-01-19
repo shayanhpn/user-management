@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.rtl.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>مدیریت کاربران</title>
 </head>
 <body class="bg-light">

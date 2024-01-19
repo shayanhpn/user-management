@@ -12,7 +12,8 @@ class DashboardController extends Controller
     public function showDashboard()
     {
         $records = Record::orderBy('created_at')->paginate(10);
-        return view('admins.dashboard',compact('records'));
+        $counter = 1;
+        return view('admins.dashboard',compact('records','counter'));
     }
 
 

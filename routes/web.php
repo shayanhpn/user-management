@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\LoginAdminController;
 use App\Http\Controllers\Admin\RegisterAdminController;
 use App\Http\Controllers\User\CreateRecordController;
+use App\Http\Controllers\User\DeleteRecordController;
 use App\Http\Controllers\User\UpdateRecordController;
 use App\Http\Controllers\User\ViewRecordController;
 use Illuminate\Support\Facades\Route;
@@ -25,4 +26,7 @@ Route::post('/create-record',[CreateRecordController::class,'createRecord']);
 Route::get('/dashboard',[DashboardController::class,'showDashboard']);
 Route::get('/view/record/{id}',[ViewRecordController::class,'viewRecord'])->name('record.view');
 
-Route::get('/update/record/{id}',[UpdateRecordController::class,'showUpdate']);
+Route::get('/update/record/{id}',[UpdateRecordController::class,'showUpdate'])->name('update.view');
+Route::put('/update/record/{record}',[UpdateRecordController::class,'updateRecord'])->name('record.update');
+
+Route::Delete('/delete/record/{id}',[DeleteRecordController::class,'deleteRecord'])->name('record.delete');
