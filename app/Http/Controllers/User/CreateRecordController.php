@@ -25,6 +25,8 @@ class CreateRecordController extends Controller
             'city' => ['required'],
             'address' => ['required']
         ],[
+            'first_name.required' => 'تکمیل گزینه شماره نام الزامی است',
+            'last_name.required' => 'تکمیل گزینه نام خانوادگی الزامی است',
             'phone_number.required' => 'تکمیل گزینه شماره تلفن الزامی است',
             'mobile_phone.required' => 'تکمیل گزینه شماره همراه الزامی است',
             'country.required' => 'تکمیل گزینه کشور الزامی است',

@@ -49,12 +49,12 @@
         <div class="row">
             <div class="col-md-12">
                 <label class="@error('address') text-danger @enderror" >آدرس</label>
-                <textarea class="form-control @error('address') is-invalid @enderror" name="address" id="" cols="30" rows="10">{{$record->address}}</textarea>
+                <textarea class="form-control @error('address') is-invalid @enderror" name="address" id="" cols="30" rows="5">{{$record->address}}</textarea>
                 @error('address') <p class="text-danger">{{$message}}</p> @enderror
             </div>
         </div>
         <div class="d-flex flex-row justify-content-center mt-4">
-            <button class="btn btn-lg btn-primary" type="submit">ویرایش رکورد</button>
+            <button class="btn btn-lg btn-purple" type="submit">ویرایش رکورد</button>
         </div>
     </form>
 </x-layout>

@@ -22,7 +22,7 @@ class LoginAdminController extends Controller
         ]);
         if(auth()->attempt(['admin_email' => $loginFields['login_email'],'password' => $loginFields['password']])){
             session()->regenerate();
-            return 'Login Successfully';
+            return redirect()->route('');
         }else
         {
             return 'Login Faild';

@@ -32,6 +32,6 @@ class UpdateRecordController extends Controller
             'address.required' => 'تکمیل گزینه آدرس الزامی است'
         ]);
         $record->update($updateFields);
-        return 'Update Successfully';
+        return back()->with('success','اطلاعات شما با موفقیت بروز شد');
     }
 }

@@ -13,10 +13,17 @@ $(document).on('click','.remove-record-btn',function(){
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
         success: (response) => {
-            location.reload()
+            if(response.success){
+                location.reload()
+            }
         },
         error: (error) => {
             console.log('Error: ',error)
         }
     })
+})
+
+$(document).ready(() => {
+    $('#alert-danger').fadeOut(5000)
+    $('#alert-success').fadeOut(5000)
 })

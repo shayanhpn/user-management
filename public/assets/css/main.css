@@ -26,3 +26,22 @@ label{
 button:hover{
     background-color: #459C98 !important;
 }
+
+.alert-success{
+    background-color: #18BB9C !important;
+}
+.alert-danger{
+    background-color: #EF5041 !important;
+}
+.bg-purple{
+    background-color: #7E30E1;
+}
+.btn-purple{
+    background-color: #7E30E1;
+    color: white;
+    border-color:#7E30E1 ;
+}
+.btn-purple:hover{
+    background-color: #FCBA03 !important;
+    color: white;
+}

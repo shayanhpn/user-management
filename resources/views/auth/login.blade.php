@@ -13,7 +13,7 @@
                 <label for="">رمز عبور</label>
                 <input type="password" class="form-control @error('password') is-invalid @enderror" name="password">
                 @error('password') <p class="text-danger">{{$message}}</p> @enderror
-                <button type="submit" class="btn btn-primary form-control mt-4">ورود</button>
+                <button type="submit" class="btn btn-purple form-control mt-4">ورود</button>
             </form>
         </div>
     </div>

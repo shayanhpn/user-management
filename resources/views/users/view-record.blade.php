@@ -1,39 +1,47 @@
 <x-navbar></x-navbar>
 <x-layout>
-<div class="p-4 bg-white shadow-sm rounded-4">
     <h3>مشخصات کلی</h3>
     <hr>
-    <div class="row">
-        <div class="col-md-4">
-            <span>نام: <b>{{$user->first_name}}</b></span>
-        </div>
-        <div class="col-md-4">
-            <span>نام خانوادگی: <b>{{$user->last_name}}</b></span>
-        </div>
-        <div class="col-md-4">
-            <span>شماره تلفن: <b>{{$user->phone_number}}</b></span>
-        </div>
-    </div>
-    <hr class="text-secondary my-4">
-    <div class="row">
-        <div class="col-md-4">
-            <span>شماره همراه: <b>{{$user->mobile_phone}}</b></span>
-        </div>
-        <div class="col-md-4">
-            <span>کشور: <b>{{$user->country}}</b></span>
-        </div>
-        <div class="col-md-4">
-            <span>استان: <b>{{$user->state}}</b></span>
-        </div>
-    </div>
-    <hr class="text-secondary my-4">
-    <div class="row">
-        <div class="col-md-4">
-            <span>شهر: <b>{{$user->city}}</b></span>
-        </div>
-        <div class="col-md-8">
-            <span>آدرس: <b>{{$user->address}}</b></span>
-        </div>
-    </div>
-</div>
+        <table class="table table-bordered table-striped table-hover table-vertical">
+            <tbody>
+            <tr>
+                <th scope="row">نام</th>
+                <td>{{ $record->first_name }}</td>
+            </tr>
+
+            <tr>
+                <th scope="row">نام خانوادگی</th>
+                <td>{{ $record->last_name }}</td>
+            </tr>
+            <tr>
+                <th scope="row">شماره تلفن</th>
+                <td>{{ $record->phone_number }}</td>
+            </tr>
+            <tr>
+                <th scope="row">شماره همراه</th>
+                <td>{{ $record->mobile_phone }}</td>
+            </tr>
+            <tr>
+                <th scope="row">کشور</th>
+                <td>{{ $record->country }}</td>
+            </tr>
+            <tr>
+                <th scope="row">استان/ایالت</th>
+                <td>{{ $record->state }}</td>
+            </tr>
+            <tr>
+                <th scope="row">شهر</th>
+                <td>{{ $record->city }}</td>
+            </tr>
+            <tr>
+                <th scope="row">آدرس</th>
+                <td>{{ $record->address }}</td>
+            </tr>
+            <tr>
+                <th scope="row">تاریخ ایجاد</th>
+                <td>{{ $record->created_at->format('d/m/Y') }}</td>
+            </tr>
+            </tbody>
+        </table>
+
 </x-layout>

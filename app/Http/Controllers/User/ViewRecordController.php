@@ -10,6 +10,6 @@ class ViewRecordController extends Controller
 {
     public function viewRecord(Record $id)
     {
-        return view('users.view-record',['user' => $id]);
+        return view('users.view-record',['record' => $id]);
     }
 }

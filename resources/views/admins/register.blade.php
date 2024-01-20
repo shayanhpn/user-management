@@ -21,7 +21,7 @@
                     @error('password') <p class="text-danger">{{$message}}</p> @enderror
                 <label for="">تکرار رمز عبور</label>
                 <input type="password" class="form-control" name="password_confirmation">
-                <button type="submit" class="btn btn-primary form-control mt-4">ایجاد حساب</button>
+                <button type="submit" class="btn btn-purple form-control mt-4">ایجاد حساب</button>
                 </form>
             </div>
     </div>

@@ -11,6 +11,7 @@ class DeleteRecordController extends Controller
     public function deleteRecord(Record $id)
     {
         $id->delete();
-        return response()->json(['message' => 'Record Deleted Successfulyy']);
+        session()->flash('danger','رکورد مورد نظر حذف شد');
+        return response()->json(['success' => true]);
     }
 }

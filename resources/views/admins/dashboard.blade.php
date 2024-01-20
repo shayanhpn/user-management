@@ -7,7 +7,7 @@
                     <div class="card-header">مدیران</div>
                     <div class="card-body">
                         <h5 class="card-title">تعداد مدیران سایت</h5>
-                        <p class="card-text">5</p>
+                        <h4 class="card-text fw-bold">{{$userCount}}</h4>
                     </div>
                 </div>
             </div>
@@ -16,7 +16,7 @@
                     <div class="card-header">کاربران</div>
                     <div class="card-body">
                         <h5 class="card-title">تعداد رکوردهای ثبت نام شده</h5>
-                        <p class="card-text">20</p>
+                        <h4 class="card-text fw-bold">{{$recordCount}}</h4>
                     </div>
                 </div>
             </div>
@@ -42,9 +42,9 @@
                     <td>{{$record->phone_number}}</td>
                     <td>{{$record->created_at}}</td>
                     <td class="text-center">
-                        <a class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="نمایش" href="{{route('record.view',$record->id)}}"><i class="fa-solid  fa-binoculars"></i></a>
-                        <a class="btn btn-outline-success" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="ویرایش" href="{{route('update.view',$record->id)}}"><i class="fa-solid fa-pen-to-square"></i></a>
-                        <button class="btn btn-outline-danger remove-record-btn"  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="حذف" data-record-id="{{$record->id}}"><i class="fa-solid fa-user-xmark"></i></button>
+                        <a class="btn btn-outline-primary border-0" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="نمایش" href="{{route('record.view',$record->id)}}"><i class="fa-solid  fa-binoculars"></i></a>
+                        <a class="btn btn-outline-success border-0" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="ویرایش" href="{{route('update.view',$record->id)}}"><i class="fa-solid fa-pen-to-square"></i></a>
+                        <button class="btn btn-outline-danger remove-record-btn border-0"  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="حذف" data-record-id="{{$record->id}}"><i class="fa-solid fa-user-xmark"></i></button>
                     </td>
                     @empty
                         <td colspan="9">رکوردی وجود ندارد</td>
@@ -52,7 +52,9 @@
                 @endforelse
             </tbody>
         </table>
-            {{$records->links()}}
+            <div class="text-center">
+                {{$records->links()}}
+            </div>
         </div>
     </div>
 </x-layout>

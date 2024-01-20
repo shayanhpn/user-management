@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rules\Password;
 
 class RegisterAdminController extends Controller
@@ -24,7 +25,8 @@ class RegisterAdminController extends Controller
         ],[
             'admin_email.required' => 'وارد کردن ایمیل الزامی است'
         ]);
-        User::create($registerFields);
-        return 'Done';
+        $user = User::create($registerFields);
+        Auth::login($user);
+        return redirect()->route('dashboard.show')->with('success','حساب کاربری شما با موفقیت ساخته شد');
     }
 }
